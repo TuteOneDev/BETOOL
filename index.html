@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./index.css" />
+		<script defer src="index.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+		/>
+		<title>RTX TOOL</title>
+	</head>
+	<body>
+	<center>
+		<h1>TEXTURE SET GENERATOR</h1>	
+		<input
+			type="text"
+			id="textureName"
+			placeholder="Ingrese el nombre de la textura"
+		/>
+		<br>
+		<label for="merCheckbox">MER</label>
+		<input type="checkbox" id="merCheckbox" checked />
+
+		<label for="heightmapCheckbox">HeightMap</label>
+		<input type="checkbox" id="heightmapCheckbox" checked />
+
+		<label for="normalCheckbox">Normal</label>
+		<input type="checkbox" id="normalCheckbox" checked />
+		<br>
+		<button onclick="guardarArchivo()">Guardar</button>
+	</center>
+	</body>
+</html>

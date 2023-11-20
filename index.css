@@ -1,0 +1,118 @@
+body {
+	font-family: "Roboto", sans-serif;
+    color: #e1e5f0;
+    background-color: #0f0f12;
+}
+
+::selection {
+    background-color: #37609d;
+    color: #e1e5f0;
+}
+
+/* Estilos básicos para el botón */
+button {
+    margin-top: 10px;
+	padding: 15px 45px;
+	font-size: 20px;
+    font-family: "Roboto", sans-serif;
+	cursor: pointer;
+	border: 0;
+	border-radius: 25px;
+	background-color: transparent;
+    border: 2px solid #e1e5f0;
+	color: #e1e5f0;
+	transition: all 0.7s;
+}
+
+/* Cambios en el estilo cuando el mouse está sobre el botón */
+button:hover {
+	border: 2px solid #37609d;
+    transform: scale(1.15);
+}
+
+input::placeholder {
+    color: #e1e5f0;
+    font-weight: lighter;
+}
+
+input[type="text"] {
+	width: 95%;
+	padding: 15px;
+	font-size: 15px;
+    font-weight: bolder;
+    font-family: "Roboto", sans-serif;
+	margin: 10px 0;
+	box-sizing: border-box;
+	border: 2px solid #e1e5f0;
+    color:#e1e5f0;
+	border-radius: 25px;
+    background-color: transparent;
+	transition: all 0.5s;
+}
+
+input[type="text"]:hover {
+	outline: none;
+	border-color: #37609d;
+	font-size: 20px;
+}
+
+input[type="text"]:focus {
+	outline: none;
+	border-color: #37609d;
+	font-size: 20px;
+}
+
+/* Estilo base para los checkboxes */
+input[type="checkbox"] {
+    margin-top: 10px;
+	appearance: none; /* Oculta el estilo predeterminado del sistema */
+	-webkit-appearance: none; /* Para navegadores basados en WebKit como Chrome y Safari */
+	-moz-appearance: none; /* Para navegadores basados en Gecko como Firefox */
+	width: 35px; /* Ajusta el tamaño del área del checkbox */
+	height: 35px;
+	margin: 50;
+	cursor: pointer;
+}
+
+/* Estilo del área del checkbox */
+input[type="checkbox"]::before {
+	content: "\e5cd";
+	display: flex;
+	font-size: 20px;
+	align-items: center; /* Centra verticalmente el contenido */
+	justify-content: center; /* Centra horizontalmente el contenido */
+	font-family: "Material Icons";
+	width: 20px; /* Tamaño del área del checkbox */
+	height: 20px;
+    color: #0f0f12;
+	border: 2px solid #e1e5f0; /* Borde del área del checkbox */
+	background-color: #e1e5f0; /* Fondo del área del checkbox */
+	border-radius: 7px; /* Radio del borde del área del checkbox */
+	margin-right: 5px; /* Espacio entre el checkbox y el texto adyacente */
+	transition: all 0.3s;
+}
+
+/* Estilo del checkbox marcado */
+input[type="checkbox"]:checked::before {
+	content: "\e5ca"; /* Código del icono de check de Material Icons */
+	display: flex;
+	font-size: 20px;
+	align-items: center; /* Centra verticalmente el contenido */
+	justify-content: center; /* Centra horizontalmente el contenido */
+	font-family: "Material Icons";
+	color: #e1e5f0;
+	background-color: #37609d; /* Cambia el fondo del área del checkbox cuando está marcado */
+	border-color: #37609d; /* Cambia el color del borde cuando está marcado */
+}
+
+/* Estilo del checkbox al pasar el ratón sobre él */
+input[type="checkbox"]:hover::before {
+	content: "\e5ca"; /* Código del icono de Material Icons para el hover */
+	display: flex;
+	font-size: 20px;
+	align-items: center; /* Centra verticalmente el contenido */
+	justify-content: center; /* Centra horizontalmente el contenido */
+	font-family: "Material Icons";
+	border-color: #37609d; /* Cambia el color del borde al pasar el ratón sobre el checkbox */
+	transform: scale(1.4);
+}
