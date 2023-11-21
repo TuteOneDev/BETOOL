@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./index.css" />
+		<link rel="icon" href="./page.ico" type="image/x-icon" />
 		<script defer src="index.js"></script>
 		<link
 			rel="stylesheet"
@@ -13,27 +14,64 @@
 			rel="stylesheet"
 			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
 		/>
-		<title>RTX TOOL</title>
+		<title>BE TOOL</title>
 	</head>
 	<body>
-	<center>
-		<h1>TEXTURE SET GENERATOR</h1>	
-		<input
-			type="text"
-			id="textureName"
-			placeholder="Ingrese el nombre de la textura"
-		/>
-		<br>
-		<label for="merCheckbox">MER</label>
-		<input type="checkbox" id="merCheckbox" checked />
+		<center>
+			<div>
+				<button onclick="mostrarTabs()">More</button>
+			</div>
+			<!-- Botones para alternar entre pestañas -->
+			<div class="TabList">
+				<button onclick="cambiarTab('TAB_01')">texture_set.json</button>
+				<button onclick="cambiarTab('TAB_02')">Pestaña 02</button>
+				<button onclick="cambiarTab('TAB_03')">Pestaña 03</button>
+				<button onclick="cambiarTab('TAB_04')">Pestaña 04</button>
+				<button onclick="cambiarTab('TAB_05')">Pestaña 05</button>
+				<button onclick="cambiarTab('TAB_06')">Pestaña 06</button>
+			</div>
+			<br />
+			<!-- Contenido de la pestaña 01 -->
+			<div id="TAB_01" class="tab active">
+				<h1>Texture Set Generator</h1>
+				<input
+					type="text"
+					id="textureName"
+					placeholder="Ingrese el nombre de la textura"
+				/>
+				<br />
+				<label for="merCheckbox">MER</label>
+				<input type="checkbox" id="merCheckbox" checked />
 
-		<label for="heightmapCheckbox">HeightMap</label>
-		<input type="checkbox" id="heightmapCheckbox" checked />
+				<label for="heightmapCheckbox">HeightMap</label>
+				<input type="checkbox" id="heightmapCheckbox" checked />
 
-		<label for="normalCheckbox">Normal</label>
-		<input type="checkbox" id="normalCheckbox" checked />
-		<br>
-		<button onclick="guardarArchivo()">Guardar</button>
-	</center>
+				<label for="normalCheckbox">Normal</label>
+				<input type="checkbox" id="normalCheckbox" checked />
+				<br />
+				<button onclick="guardarArchivo()">Guardar</button>
+			</div>
+
+			<!-- Contenido de la pestaña 02 -->
+			<div id="TAB_02" class="tab">
+				<h1>Contenido de la Pestaña 02</h1>
+			</div>
+
+			<div id="TAB_03" class="tab">
+				<h1>Contenido de la Pestaña 03</h1>
+			</div>
+
+			<div id="TAB_04" class="tab">
+				<h1>Contenido de la Pestaña 04</h1>
+			</div>
+			
+			<div id="TAB_05" class="tab">
+				<h1>Contenido de la Pestaña 05</h1>
+			</div>
+			
+			<div id="TAB_06" class="tab">
+				<h1>Contenido de la Pestaña 06</h1>
+			</div>
+		</center>
 	</body>
 </html>

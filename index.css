@@ -1,25 +1,25 @@
 body {
 	font-family: "Roboto", sans-serif;
-    color: #e1e5f0;
-    background-color: #0f0f12;
+	color: #e1e5f0;
+	background-color: #0f0f12;
 }
 
 ::selection {
-    background-color: #37609d;
-    color: #e1e5f0;
+	background-color: #37609d;
+	color: #e1e5f0;
 }
 
 /* Estilos básicos para el botón */
 button {
-    margin-top: 10px;
+	margin-top: 10px;
 	padding: 15px 45px;
 	font-size: 20px;
-    font-family: "Roboto", sans-serif;
+	font-family: "Roboto", sans-serif;
 	cursor: pointer;
 	border: 0;
 	border-radius: 25px;
 	background-color: transparent;
-    border: 2px solid #e1e5f0;
+	border: 2px solid #e1e5f0;
 	color: #e1e5f0;
 	transition: all 0.7s;
 }
@@ -27,26 +27,31 @@ button {
 /* Cambios en el estilo cuando el mouse está sobre el botón */
 button:hover {
 	border: 2px solid #37609d;
-    transform: scale(1.15);
+	transform: scale(1.15);
+}
+
+/* Cambio de color al pasar el ratón sobre los botones dentro del contenedor específico */
+.TabList button:hover {
+	transform: scale(0.9);
 }
 
 input::placeholder {
-    color: #e1e5f0;
-    font-weight: lighter;
+	color: #e1e5f0;
+	font-weight: lighter;
 }
 
 input[type="text"] {
 	width: 95%;
 	padding: 15px;
 	font-size: 15px;
-    font-weight: bolder;
-    font-family: "Roboto", sans-serif;
+	font-weight: bolder;
+	font-family: "Roboto", sans-serif;
 	margin: 10px 0;
 	box-sizing: border-box;
 	border: 2px solid #e1e5f0;
-    color:#e1e5f0;
+	color: #e1e5f0;
 	border-radius: 25px;
-    background-color: transparent;
+	background-color: transparent;
 	transition: all 0.5s;
 }
 
@@ -64,7 +69,7 @@ input[type="text"]:focus {
 
 /* Estilo base para los checkboxes */
 input[type="checkbox"] {
-    margin-top: 10px;
+	margin-top: 10px;
 	appearance: none; /* Oculta el estilo predeterminado del sistema */
 	-webkit-appearance: none; /* Para navegadores basados en WebKit como Chrome y Safari */
 	-moz-appearance: none; /* Para navegadores basados en Gecko como Firefox */
@@ -84,7 +89,7 @@ input[type="checkbox"]::before {
 	font-family: "Material Icons";
 	width: 20px; /* Tamaño del área del checkbox */
 	height: 20px;
-    color: #0f0f12;
+	color: #0f0f12;
 	border: 2px solid #e1e5f0; /* Borde del área del checkbox */
 	background-color: #e1e5f0; /* Fondo del área del checkbox */
 	border-radius: 7px; /* Radio del borde del área del checkbox */
@@ -115,4 +120,28 @@ input[type="checkbox"]:hover::before {
 	font-family: "Material Icons";
 	border-color: #37609d; /* Cambia el color del borde al pasar el ratón sobre el checkbox */
 	transform: scale(1.4);
+}
+.TabList {
+	opacity: 0;
+	overflow: hidden;
+	max-height: 0px;
+	transform: scale(0.9);
+	transition: opacity 0.5s ease-out, max-height 1s ease-in-out,
+		transform 0.8s ease-out;
+}
+
+.TabList.active {
+	opacity: 1;
+	max-height: 1000px;
+	transform: scale(1);
+}
+
+/* Estilo para ocultar pestañas */
+.tab {
+	display: none;
+}
+
+/* Estilo para mostrar la pestaña activa */
+.tab.active {
+	display: block;
 }
