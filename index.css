@@ -19,14 +19,14 @@ button {
 	border: 0;
 	border-radius: 25px;
 	background-color: transparent;
-	border: 2px solid #e1e5f0;
+	border: 4px solid #e1e5f0;
 	color: #e1e5f0;
 	transition: all 0.7s;
 }
 
 /* Cambios en el estilo cuando el mouse está sobre el botón */
 button:hover {
-	border: 2px solid #37609d;
+	border: 4px solid #37609d;
 	transform: scale(1.15);
 }
 
@@ -48,7 +48,7 @@ input[type="text"] {
 	font-family: "Roboto", sans-serif;
 	margin: 10px 0;
 	box-sizing: border-box;
-	border: 2px solid #e1e5f0;
+	border: 4px solid #e1e5f0;
 	color: #e1e5f0;
 	border-radius: 25px;
 	background-color: transparent;
@@ -90,7 +90,7 @@ input[type="checkbox"]::before {
 	width: 20px; /* Tamaño del área del checkbox */
 	height: 20px;
 	color: #0f0f12;
-	border: 2px solid #e1e5f0; /* Borde del área del checkbox */
+	border: 4px solid #e1e5f0; /* Borde del área del checkbox */
 	background-color: #e1e5f0; /* Fondo del área del checkbox */
 	border-radius: 7px; /* Radio del borde del área del checkbox */
 	margin-right: 5px; /* Espacio entre el checkbox y el texto adyacente */
