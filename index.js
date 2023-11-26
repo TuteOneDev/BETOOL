@@ -1,3 +1,11 @@
+document.addEventListener("DOMContentLoaded", function () {
+    var urlParams = new URLSearchParams(window.location.search);
+    var tabId = urlParams.get("tab");
+    if (tabId) {
+      cambiarTab(tabId);
+    }
+  });
+
 document.addEventListener("keydown", function (event) {
     // Verificar si algún campo de texto tiene el foco
     if (
@@ -56,8 +64,15 @@ function cambiarTab(tabId) {
     // Desactivar todas las pestañas
     document.querySelectorAll(".tab").forEach(tab => tab.classList.remove("active"));
     // Activar la pestaña correspondiente
-    document.getElementById(tabId).classList.add("active");
-}
+    var tab = document.getElementById(tabId);
+    if (tab) {
+      tab.classList.add("active");
+  
+      // Actualizar la URL con el ID de la pestaña
+      var stateObj = { tab: tabId };
+      history.pushState(stateObj, "", "?tab=" + tabId);
+    }
+  }
 
 function mostrarTabs() {
     const tabList = document.querySelector('.TabList');
